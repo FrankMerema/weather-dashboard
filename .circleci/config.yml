@@ -92,16 +92,16 @@ workflows:
           filters:
             branches:
               only: master
-      - approval-release:
+      - approval-deploy:
           type: approval
           requires:
             - build
           filters:
             branches:
               only: master
-      - release:
+      - deploy:
           requires:
-            - approval-release
+            - approval-deploy
           filters:
             branches:
               only: master
