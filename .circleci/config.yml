@@ -1,0 +1,107 @@
+version: 2
+
+docker-install: &docker-setup
+  docker:
+    - image: circleci/node:latest
+  working_directory: ~/repo
+
+restore-dep-cache: &restore-dep-cache
+  restore_cache:
+    keys:
+      - v1-dependencies-{{ checksum "package.json" }}
+      - v1-dependencies-
+
+jobs:
+  install:
+    <<: *docker-setup
+    steps:
+      - checkout
+      - *restore-dep-cache
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+
+  lint:
+    <<: *docker-setup
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - *restore-dep-cache
+      - run: yarn lint
+
+  test:
+    <<: *docker-setup
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - *restore-dep-cache
+      - run: yarn test
+      - store_test_results:
+          path: coverage
+      - store_artifacts:
+          path: coverage
+
+  build:
+    <<: *docker-setup
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - *restore-dep-cache
+      - run: yarn generate
+      - persist_to_workspace:
+          root: ~/repo
+          paths: dist
+
+  deploy:
+    <<: *docker-setup
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run: yarn global add netlify-cli
+      - run: netlify deploy --site ${NETLIFY_SITE_ID} --auth ${NETLIFY_AUTH_TOKEN} --prod
+
+workflows:
+  version: 2
+  test_and_build:
+    jobs:
+      - install
+      - test:
+          requires:
+            - install
+      - lint:
+          requires:
+            - install
+      - build:
+          requires:
+            - test
+            - lint
+  release_version:
+    jobs:
+      - install:
+          filters:
+            branches:
+              only: master
+      - build:
+          requires:
+            - install
+          filters:
+            branches:
+              only: master
+      - approval-release:
+          type: approval
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - release:
+          requires:
+            - approval-release
+          filters:
+            branches:
+              only: master
