@@ -1,0 +1,68 @@
+@import '../constants/variables';
+@import '../constants/mixins';
+
+input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid $hb-input-not-active;
+  border-radius: 0;
+  color: $hb-white;
+  cursor: text;
+  font-size: $hb-font-size;
+  padding: 0;
+  width: 100%;
+
+  &:focus {
+    border-bottom: 1px solid $hb-white;
+    outline: 0;
+  }
+}
+
+.error-message {
+  color: $hb-input-error-message;
+  font-size: 14px;
+  padding: $hb-gutter-size-small;
+  text-align: center;
+  width: 100%;
+}
+
+.floating-label-input {
+  margin-bottom: 1rem;
+  position: relative;
+
+  label {
+    @include position(absolute, $hb-gutter-size 0 0 0px);
+    color: $hb-input-not-active;
+    font-size: $hb-font-size;
+    line-height: 1;
+    padding: $hb-gutter-size-small;
+    pointer-events: none;
+    transition: 0.2s ease all;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $hb-input-not-active;
+    color: $hb-white;
+    display: block;
+    font-size: $hb-font-size;
+    margin-top: $hb-gutter-size;
+    padding: $hb-gutter-size-small;
+
+    &:focus {
+      border-bottom-color: $hb-white;
+      outline: none;
+    }
+
+    &:focus,
+    &:valid {
+      & ~ label {
+        color: $hb-white;
+        font-size: 12px;
+        padding-top: $hb-gutter-size-small / 4;
+        top: 0;
+      }
+    }
+  }
+}
