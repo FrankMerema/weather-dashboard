@@ -62,7 +62,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
-      - run: yarn global add netlify-cli
+      - run: sudo npm install -g --silent netlify-cli
       - run: netlify deploy --site ${NETLIFY_SITE_ID} --auth ${NETLIFY_AUTH_TOKEN} --prod
 
 workflows:
