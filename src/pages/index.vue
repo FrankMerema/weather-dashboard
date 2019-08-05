@@ -1,56 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        weather-dashboard
-      </h1>
-      <h2 class="subtitle">
-        A dashboard for seeing weather information about the selected cities
-      </h2>
-      <div class="links">
-        <button type="button" class="btn btn-primary">Click me</button>
-        <a href="https://nuxtjs.org/" target="_blank" class="btn btn-primary">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <section class="scroll-container">
+    <h1 class="title">
+      weather-dashboard
+    </h1>
+    <h2 class="subtitle">
+      A dashboard for seeing weather information about the selected cities
+    </h2>
+    <div class="links">
+      <button type="button" class="btn btn-primary">Click me</button>
+      <a href="https://nuxtjs.org/" target="_blank" class="btn btn-primary">
+        Documentation
+      </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
-
-export default {
-  components: {
-    Logo
-  }
-};
+export default {};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
+<style lang="scss">
 .title {
   display: block;
-  font-weight: 300;
-  font-size: 100px;
   color: #35495e;
+  font-weight: 300;
+  font-size: 60px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .subtitle {

@@ -30,10 +30,7 @@ export default {
       '~/assets/styling/constants/_variables.scss'
     ]
   },
-  css: [
-    '~/assets/styling/main.scss',
-    './node_modules/normalize.css/normalize.css'
-  ],
+  css: ['~/assets/styling/main.scss', 'normalize.css'],
   /*
    ** Nuxt.js dev-modules
    */

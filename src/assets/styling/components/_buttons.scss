@@ -5,7 +5,7 @@
   align-items: center;
   background: none;
   border: 0;
-  border-radius: $hb-gutter-size-small / 2;
+  border-radius: $ws-gutter-size-small / 2;
   cursor: pointer;
   display: inline-block;
   line-height: 1.15;
@@ -33,7 +33,7 @@
     background: transparent;
     border: 1px solid #3b8070;
     color: #3b8070;
-    font-size: $hb-font-size;
+    font-size: $ws-font-size;
     font-weight: 700;
     padding: 10px 30px;
   }

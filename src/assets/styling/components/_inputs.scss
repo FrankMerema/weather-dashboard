@@ -4,24 +4,24 @@
 input {
   background-color: transparent;
   border: 0;
-  border-bottom: 1px solid $hb-input-not-active;
+  border-bottom: 1px solid $ws-input-not-active;
   border-radius: 0;
-  color: $hb-white;
+  color: $ws-white;
   cursor: text;
-  font-size: $hb-font-size;
+  font-size: $ws-font-size;
   padding: 0;
   width: 100%;
 
   &:focus {
-    border-bottom: 1px solid $hb-white;
+    border-bottom: 1px solid $ws-white;
     outline: 0;
   }
 }
 
 .error-message {
-  color: $hb-input-error-message;
+  color: $ws-input-error-message;
   font-size: 14px;
-  padding: $hb-gutter-size-small;
+  padding: $ws-gutter-size-small;
   text-align: center;
   width: 100%;
 }
@@ -31,11 +31,11 @@ input {
   position: relative;
 
   label {
-    @include position(absolute, $hb-gutter-size 0 0 0px);
-    color: $hb-input-not-active;
-    font-size: $hb-font-size;
+    @include position(absolute, $ws-gutter-size 0 0 0px);
+    color: $ws-input-not-active;
+    font-size: $ws-font-size;
     line-height: 1;
-    padding: $hb-gutter-size-small;
+    padding: $ws-gutter-size-small;
     pointer-events: none;
     transition: 0.2s ease all;
   }
@@ -43,24 +43,24 @@ input {
   input {
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $hb-input-not-active;
-    color: $hb-white;
+    border-bottom: 1px solid $ws-input-not-active;
+    color: $ws-white;
     display: block;
-    font-size: $hb-font-size;
-    margin-top: $hb-gutter-size;
-    padding: $hb-gutter-size-small;
+    font-size: $ws-font-size;
+    margin-top: $ws-gutter-size;
+    padding: $ws-gutter-size-small;
 
     &:focus {
-      border-bottom-color: $hb-white;
+      border-bottom-color: $ws-white;
       outline: none;
     }
 
     &:focus,
     &:valid {
       & ~ label {
-        color: $hb-white;
+        color: $ws-white;
         font-size: 12px;
-        padding-top: $hb-gutter-size-small / 4;
+        padding-top: $ws-gutter-size-small / 4;
         top: 0;
       }
     }

@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils';
-import Logo from '@/components/Logo.vue';
+import Icon from '@/components/icons/Icon.vue';
 
-describe('Logo', () => {
+describe('Icon', () => {
   test('is a Vue instance', () => {
-    const wrapper = mount(Logo);
+    const wrapper = mount(Icon, { props: { icon: 'ws-test' } });
     expect(wrapper.isVueInstance()).toBeTruthy();
   });
 });

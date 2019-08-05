@@ -22,8 +22,8 @@ time, mark, audio, video {
 
 html {
   box-sizing: border-box;
-  font-family: $hb-font-family;
-  font-size: $hb-font-size;
+  font-family: $ws-font-family;
+  font-size: $ws-font-size;
   height: 100%;
 }
 
@@ -39,10 +39,14 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: $hb-background-color;
+  background: $ws-background-color;
   height: 100%;
   line-height: 1.5;
   width: 100%;
+}
+
+#__nuxt, #__layout {
+  height: 100%;
 }
 
 figure {

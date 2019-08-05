@@ -14,7 +14,7 @@
 
 h1,
 .h1 {
-  font-family: $hb-font-family;
+  font-family: $ws-font-family;
   font-size: 40px;
   font-stretch: normal;
   font-style: normal;
@@ -26,7 +26,7 @@ h1,
 
 h2,
 .h2 {
-  font-family: $hb-font-family;
+  font-family: $ws-font-family;
   font-size: 24px;
   font-stretch: normal;
   font-style: normal;
@@ -38,7 +38,7 @@ h2,
 
 h3,
 .h3 {
-  font-family: $hb-font-family;
+  font-family: $ws-font-family;
   font-size: 20px;
   font-stretch: normal;
   font-style: normal;
@@ -49,8 +49,8 @@ h3,
 
 h4,
 .h4 {
-  font-family: $hb-font-family;
-  font-size: $hb-font-size;
+  font-family: $ws-font-family;
+  font-size: $ws-font-size;
   font-stretch: normal;
   font-style: normal;
   font-weight: 700;
@@ -74,7 +74,7 @@ a {
   cursor: pointer;
 }
 
-hb-icon {
+ws-icon {
   vertical-align: middle;
 }
 
@@ -83,5 +83,5 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: $hb-font-family;
+  font-family: $ws-font-family;
 }
