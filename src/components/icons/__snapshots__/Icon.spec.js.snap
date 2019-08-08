@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon snapshot render logo icon correctly 1`] = `
+<svg
+  class="ws-icon"
+>
+  <use
+    xlink:href="#ws-logo"
+  />
+</svg>
+`;

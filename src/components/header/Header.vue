@@ -1,17 +1,16 @@
 <template>
   <header class="ws-header">
-    <icon icon="logo" />
+    <ws-icon icon="logo" :chameleon="true" />
     <h2>Merema's Weather</h2>
   </header>
 </template>
 
 <script>
-import Icon from '~/components/icons/Icon';
+import WsIcon from '~/components/icons/Icon';
 
 export default {
-  name: 'Header',
   components: {
-    Icon
+    WsIcon
   }
 };
 </script>
@@ -34,7 +33,6 @@ export default {
 
   .ws-icon {
     @include size($ws-gutter-size-small * 3);
-    fill: $ws-white;
     margin: $ws-gutter-size-small $ws-gutter-size-small $ws-gutter-size-small 0;
   }
 }

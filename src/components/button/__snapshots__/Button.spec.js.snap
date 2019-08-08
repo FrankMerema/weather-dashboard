@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button snapshot render a disabled button 1`] = `
+<button
+  class="btn"
+  disabled="disabled"
+  type="button"
+>
+  Disabled button
+</button>
+`;
+
+exports[`Button snapshot render a submit button 1`] = `
+<button
+  class="btn"
+  type="submit"
+>
+  Submit button
+</button>
+`;

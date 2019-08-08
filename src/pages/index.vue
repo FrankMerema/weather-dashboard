@@ -7,19 +7,27 @@
       A dashboard for seeing weather information about the selected cities
     </h2>
     <div class="links">
-      <button type="button" class="btn btn-primary">Click me</button>
-      <a href="https://nuxtjs.org/" target="_blank" class="btn btn-primary">
-        Documentation
-      </a>
+      <ws-button class="btn-primary">
+        Click me
+      </ws-button>
+      <ws-button type="button" class="btn-primary">Click me</ws-button>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import WsButton from '~/components/button/Button';
+
+export default {
+  components: { WsButton }
+};
 </script>
 
 <style lang="scss">
+.scroll-container {
+  padding: $ws-gutter-size;
+}
+
 .title {
   display: block;
   color: #35495e;

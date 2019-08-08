@@ -1,19 +1,19 @@
 <template>
   <main>
-    <Header />
+    <ws-header />
     <nuxt />
-    <icon-registry />
+    <ws-icon-registry />
   </main>
 </template>
 
 <script>
-import Header from '~/components/header/Header';
-import IconRegistry from '~/components/icons/IconRegistry.vue';
+import WsHeader from '~/components/header/Header';
+import WsIconRegistry from '~/components/icons/IconRegistry';
 
 export default {
   components: {
-    Header,
-    IconRegistry
+    WsHeader,
+    WsIconRegistry
   }
 };
 </script>

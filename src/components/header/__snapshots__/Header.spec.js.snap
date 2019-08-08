@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot render Header correctly 1`] = `
+<header
+  class="ws-header"
+>
+  <svg
+    class="ws-icon chameleon"
+  >
+    <use
+      xlink:href="#ws-logo"
+    />
+  </svg>
+   
+  <h2>
+    Merema's Weather
+  </h2>
+</header>
+`;

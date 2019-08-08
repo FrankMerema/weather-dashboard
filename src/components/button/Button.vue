@@ -1,5 +1,27 @@
-@import '../constants/variables';
+<template>
+  <button class="btn" :disabled="disabled" :type="type">
+    <slot />
+  </button>
+</template>
 
+<script>
+export default {
+  props: {
+    disabled: {
+      default: false,
+      required: false,
+      type: Boolean
+    },
+    type: {
+      default: 'button',
+      required: false,
+      type: String
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
 .btn {
   align-content: center;
   align-items: center;
@@ -38,3 +60,4 @@
     padding: 10px 30px;
   }
 }
+</style>

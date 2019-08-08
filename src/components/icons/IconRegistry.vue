@@ -7,9 +7,3 @@
     </symbol>
   </svg>
 </template>
-
-<script>
-export default {
-  name: 'IconRegistry'
-};
-</script>

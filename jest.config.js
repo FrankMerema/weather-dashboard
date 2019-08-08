@@ -9,10 +9,11 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
+  snapshotSerializers: ['jest-serializer-vue'],
   transformIgnorePatterns: ['/node_modules/'],
   collectCoverage: true,
   collectCoverageFrom: [
-    '<rootDir>/src/components/**/*.vue',
-    '<rootDir>/src/pages/**/*.vue'
+    '<rootDir>/src/components/**/*.{js,vue}',
+    '<rootDir>/src/pages/**/*.{js,vue}'
   ]
 };
