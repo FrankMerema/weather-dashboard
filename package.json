@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxtjs/axios": "5.5.4",
     "normalize.css": "8.0.1",
-    "nuxt": "2.8.1"
+    "nuxt": "2.9.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "1.1.2",
